@@ -51,13 +51,4 @@ foreach ($roles->getAllRoles() as $role) {
     echo ($role->role_id) . " - " . ($role->role_name). " - " .$role->role_description. " - " .$role->role_status;
     echo "<br>";
 }
-
-//testing clear session
-$roles->clearSession();
-echo "=============================". "<br>";
-foreach ($roles->getAllRoles() as $role) {
-    echo ($role->role_id) . " - " . ($role->role_name). " - " .$role->role_description. " - " .$role->role_status;
-    echo "<br>";
-}
-
 ?>
