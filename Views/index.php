@@ -6,7 +6,7 @@
     <title>Title Coba</title>
 </head>
 <body>
-<h1 class ="font-sans text-blue-600">
+<h1 class="text-4xl font-bold text-red-900">
     <?php
         // read main.php file
         include '../main.php';
