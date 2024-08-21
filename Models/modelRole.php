@@ -1,8 +1,8 @@
 <?php
 namespace Models;
 
-include '../Nodes/Role.php';
-class ModelRole
+include '../Nodes/nodeRole.php';
+class modelRole
 {
     private $roles = [];
     private $nextId = 1;
