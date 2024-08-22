@@ -1,10 +1,10 @@
 <?php
 
-use Models\ModelRole;
+use Models\modelRole;
 
-include 'Models/Role.php';
+include 'Models/modelRole.php';
 
-$roles = new ModelRole();
+$roles = new modelRole();
 
 // testing for addRole and getAllRoles
 foreach ($roles->getAllRoles() as $role) {
@@ -51,13 +51,14 @@ foreach ($roles->getAllRoles() as $role) {
     echo ($role->role_id) . " - " . ($role->role_name). " - " .$role->role_description. " - " .$role->role_status;
     echo "<br>";
 }
-
-//testing clear session
-$roles->clearSession();
 echo "=============================". "<br>";
+
+//add new role
+$roles->addRole("admin gudang", "admin gudang", 0);
+
+//show all roles
 foreach ($roles->getAllRoles() as $role) {
     echo ($role->role_id) . " - " . ($role->role_name). " - " .$role->role_description. " - " .$role->role_status;
     echo "<br>";
 }
-
 ?>
