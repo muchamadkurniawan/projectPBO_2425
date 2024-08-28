@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 
-include '../Nodes/nodeRole.php';
+include 'Nodes/nodeRole.php';
 class modelRole
 {
     private $roles = [];
@@ -19,7 +19,7 @@ class modelRole
     public function initiliazeDefaultRole(){
         $this->addRole("Admin","Administrator",1);
         $this->addRole("User","Costomer/member",1);
-        $this->addRole("kasir","Pembayaran",1);
+        $this->addRole("kasir","Pembayaran",0);
     }
 
     public function addRole($role_name, $role_description, $role_status){
