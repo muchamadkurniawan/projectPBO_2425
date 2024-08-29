@@ -36,8 +36,19 @@ class modelUser{
         $role1 = $roles->getRoleById(1);
         $this->addUser($role3, "kasir1 ", "kasir1", "krisna");
         $this->addUser($role1, "admin1", "admin1", "aan");
-//        $roles = new \modelRole();
+    }
 
+    public function updateUser($id, $role, $username, $password, $nama){
+        foreach ($this->users as $user){
+            if ($user->userId == $id){
+                $user->role = $role;
+                $user->username = $username;
+                $user->password = $password;
+                $user->nama = $nama;
+                $this->saveToSession();
+                return true;
+            }
+        }
     }
 }
 
