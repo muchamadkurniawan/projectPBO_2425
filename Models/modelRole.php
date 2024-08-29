@@ -1,6 +1,4 @@
 <?php
-namespace Models;
-
 include 'Nodes/nodeRole.php';
 class modelRole
 {
@@ -46,16 +44,14 @@ class modelRole
 
     public function updateRole($role_id, $role_name, $role_description, $role_status){
         foreach($this->roles as $role){
-            if ($role->role_id == $role_id){
+            if ($role->role_id == $role_id) {
                 $role->role_name = $role_name;
                 $role->role_description = $role_description;
                 $role->role_status = $role_status;
                 $this->saveToSession();
                 return true;
-                break;
             }
         }
-        return false;
     }
 
     public function deleteRole($role_id){
@@ -69,6 +65,7 @@ class modelRole
         }
         return false;
     }
+
 }
 
 ?>

@@ -21,7 +21,7 @@
             <!-- Formulir Input Role -->
             <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800">Input Role</h2>
-                <form action="RoleEntryPoint.php?action=add" method="POST">
+                <form action="MainEntryPoint.php?modul=role&fitur=add" method="POST">
                     <!-- Nama Role -->
                     <div class="mb-4">
                         <label for="role_name" class="block text-gray-700 text-sm font-bold mb-2">Nama Role:</label>

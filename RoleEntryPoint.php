@@ -1,5 +1,4 @@
 <?php
-session_start();
 //create object modelRole
 include 'Controllers/controllerRole.php';
 

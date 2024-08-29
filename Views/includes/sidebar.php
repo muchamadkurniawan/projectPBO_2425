@@ -2,31 +2,33 @@
     <div class="p-4 font-bold text-lg">Menu</div>
     <ul class="mt-4 space-y-2">
         <li class="group">
-            <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer group-hover:bg-gray-700">Master Data Role</div>
-            <ul class="ml-4 space-y-1 hidden group-hover:block">
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>
-            </ul>
+            <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer group-hover:bg-gray-700">
+                <a href="MainEntryPoint.php?modul=role">Master Data Role</a>
+            </div>
+<!--            <ul class="ml-4 space-y-1 hidden group-hover:block">-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>-->
+<!--            </ul>-->
         </li>
         <li class="group">
             <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer group-hover:bg-gray-700">Master Data User</div>
-            <ul class="ml-4 space-y-1 hidden group-hover:block">
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>
-            </ul>
+<!--            <ul class="ml-4 space-y-1 hidden group-hover:block">-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>-->
+<!--            </ul>-->
         </li>
         <li class="group">
             <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer group-hover:bg-gray-700">Master Data Barang</div>
-            <ul class="ml-4 space-y-1 hidden group-hover:block">
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>
-                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>
-            </ul>
+<!--            <ul class="ml-4 space-y-1 hidden group-hover:block">-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">List</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Insert</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Update</li>-->
+<!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>-->
+<!--            </ul>-->
         </li>
         <li>
             <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Menu Transaksi</div>

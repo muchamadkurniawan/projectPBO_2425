@@ -2,8 +2,7 @@
 
 class nodeUser
 {
-    public $role; // object Role
-
+    public $role;
     public $userId;
     public $username;
     public $password;

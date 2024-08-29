@@ -1,8 +1,7 @@
 <?php
 
-use Models\modelRole;
-
-include '../Nodes/nodeUser.php';
+include 'Nodes/nodeUser.php';
+include 'modelRole.php';
 
 class modelUser{
     private $users = [];
@@ -37,6 +36,8 @@ class modelUser{
         $role1 = $roles->getRoleById(1);
         $this->addUser($role3, "kasir1 ", "kasir1", "krisna");
         $this->addUser($role1, "admin1", "admin1", "aan");
+//        $roles = new \modelRole();
+
     }
 }
 
