@@ -50,6 +50,18 @@ class modelUser{
             }
         }
     }
+
+    public function deleteUser($id){
+        foreach ($this->users as $key=>$user){
+            if ($user->userId){
+                unset($this->users[$key]);
+                $this->users = array_values($this->users);
+                $this->saveToSession();
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 ?>

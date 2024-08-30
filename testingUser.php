@@ -9,6 +9,7 @@ $objUser = new modelUser();
 $_SESSION = array();        // Unset all session variables
 session_destroy();          // Destroy the session
 session_write_close();      // Close the session
+
 //testing get all user
 $datas = $objUser->getAllUsers();
 foreach ($datas as $data){
@@ -53,5 +54,17 @@ foreach ($objUser->getAllUsers() as $user){
     echo "------------------"."<br>";
 }
 echo "======================================"."<br>";
+
+//testing delete user
+echo "DELETE USER"."<br>";
+$objUser->deleteUser(3);
+$objUser->updateUser(1,$roles[2],"userupdate","passwordupdate","nama update");
+foreach ($objUser->getAllUsers() as $user){
+    echo $user->nama."<br>";
+    echo $user->role->role_name."<br>";
+    echo "------------------"."<br>";
+}
+echo "======================================"."<br>";
+
 
 ?>
