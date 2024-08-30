@@ -43,6 +43,14 @@ class controllerRole
             header('location: MainEntryPoint.php?modul=role');
         }
     }
+
+    public function getListRoleName(){
+        $listRoleName = [];
+        foreach ($this->roleModel->getAllRoles() as $role){
+            $listRoleName[]=$role->role_name;
+        }
+        return $listRoleName;
+    }
 }
 
 ?>

@@ -3,10 +3,12 @@
 session_start();
 
 // dependency
-include 'Controllers/controllerRole.php';
+require_once 'Controllers/controllerRole.php';
+require_once 'Controllers/controllerUser.php';
 
 //objects
 $objectRole = new controllerRole();
+$objectUser = new controllerUser();
 
 if (isset($_GET['modul'])){
     $modul = $_GET['modul'];
@@ -17,6 +19,22 @@ if (isset($_GET['modul'])){
 switch ($modul){
     case 'dashboard':
         include 'Views/kosong.php';
+        break;
+    case 'user':
+        $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;
+        switch ($fitur){
+            case 'add':
+//                if ($_SERVER['REQUEST_METHOD']=='POST'){
+//
+//                } else {
+//
+//                }
+                $listRoleName = $objectRole->getListRoleName();
+                include 'Views/user_input.php';
+                break;
+            default:
+                $objectUser->listUser();
+        }
         break;
     case 'role':
         $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;

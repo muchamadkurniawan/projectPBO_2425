@@ -1,5 +1,5 @@
 <?php
-include 'Nodes/nodeRole.php';
+require_once 'Nodes/nodeRole.php';
 class modelRole
 {
     private $roles = [];
@@ -64,6 +64,14 @@ class modelRole
             }
         }
         return false;
+    }
+
+    public function getRoleByName($role_name){
+        foreach($this->roles as $role){
+            if ($role->role_name == $role_name){
+                return $role;
+            }
+        }
     }
 
 }

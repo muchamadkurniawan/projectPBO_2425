@@ -1,7 +1,7 @@
 <?php
 
-include 'Nodes/nodeUser.php';
-include 'modelRole.php';
+require_once 'Nodes/nodeUser.php';
+require_once 'modelRole.php';
 
 class modelUser{
     private $users = [];

@@ -68,3 +68,7 @@ echo "======================================"."<br>";
 
 
 ?>
+// End the session
+$_SESSION = array();        // Unset all session variables
+session_destroy();          // Destroy the session
+session_write_close();      // Close the session
