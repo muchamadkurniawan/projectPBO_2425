@@ -21,6 +21,7 @@
     $role2 = $roles->getRoleById(2);
     $role3 = $roles->getRoleById(3);
     //add user
+    $user
     $users->addUser($role2, "costomer1", "costomer111", "kurniawan");
     $users->addUser($role3, "costomer2", "costomer222","aan");
 
@@ -30,6 +31,8 @@
             ($user -> username). " - " .($user -> password). " - " .($user -> nama);
         echo "<br>";
     }
+
+    //testing delete user
     ?>
 </h2>
 

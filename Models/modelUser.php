@@ -27,8 +27,18 @@ class modelUser{
         $_SESSION['users'] = serialize($this->users);
     }
 
-    public function getAllUsers(){
+    public function getAllUsers(): array{
         return $this->users;
+    }
+
+    public function deleteUserById($userId): void{
+        foreach($this->users as $key => $user){
+            if($user->userId == $userId){
+                unset($this->users[$key]);
+                $this->saveToSession();
+                break;
+            }
+        }
     }
 }
 
