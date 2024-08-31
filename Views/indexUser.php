@@ -6,7 +6,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body>
-<h1 class="text-4xl underline" >
+<h1 class="text-4xl text-red-900" >
     tes user
 </h1>
 <h2>

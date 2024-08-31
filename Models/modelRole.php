@@ -1,7 +1,5 @@
 <?php
-namespace Models;
-
-include '../Nodes/nodeRole.php';
+require_once 'Nodes/nodeRole.php';
 class modelRole
 {
     private $roles = [];
@@ -19,7 +17,7 @@ class modelRole
     public function initiliazeDefaultRole(){
         $this->addRole("Admin","Administrator",1);
         $this->addRole("User","Costomer/member",1);
-        $this->addRole("kasir","Pembayaran",1);
+        $this->addRole("kasir","Pembayaran",0);
     }
 
     public function addRole($role_name, $role_description, $role_status){
@@ -46,16 +44,14 @@ class modelRole
 
     public function updateRole($role_id, $role_name, $role_description, $role_status){
         foreach($this->roles as $role){
-            if ($role->role_id == $role_id){
+            if ($role->role_id == $role_id) {
                 $role->role_name = $role_name;
                 $role->role_description = $role_description;
                 $role->role_status = $role_status;
                 $this->saveToSession();
                 return true;
-                break;
             }
         }
-        return false;
     }
 
     public function deleteRole($role_id){
@@ -69,6 +65,15 @@ class modelRole
         }
         return false;
     }
+
+    public function getRoleByName($role_name){
+        foreach($this->roles as $role){
+            if ($role->role_name == $role_name){
+                return $role;
+            }
+        }
+    }
+
 }
 
 ?>
