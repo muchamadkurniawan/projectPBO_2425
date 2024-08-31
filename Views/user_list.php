@@ -51,7 +51,7 @@
                                 <?php echo htmlspecialchars($user->userId); ?>
                             </td>
                             <td class="w-1/4 py-3 px-4">
-                                <?php echo htmlspecialchars($user->nama); ?>
+                                <?php echo htmlspecialchars($user->name); ?>
                             </td>
                             <td class="w-1/3 py-3 px-4">
                                 <?php echo htmlspecialchars($user->username); ?>
