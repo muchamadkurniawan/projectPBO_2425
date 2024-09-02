@@ -49,6 +49,7 @@ class modelUser{
                 return true;
             }
         }
+        return null;
     }
 
     public function deleteUser($id){
