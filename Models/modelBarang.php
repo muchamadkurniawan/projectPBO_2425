@@ -47,4 +47,13 @@ class modelBarang
         $this->addBarang("kemucing",2000);
         $this->addBarang("tongkat pel",9000);
     }
+
+    public function getBarangById($id){
+        foreach ($this->barangs as $barang){
+            if ($barang->idBarang == $id){
+                return $barang;
+            }
+        }
+        return null;
+    }
 }

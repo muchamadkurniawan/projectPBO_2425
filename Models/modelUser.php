@@ -63,6 +63,15 @@ class modelUser{
         }
         return false;
     }
+
+    public function getUserById($id){
+        foreach ($this->users as $user){
+            if ($user->userId == $id){
+                return $user;
+            }
+        }
+        return null;
+    }
 }
 
 ?>
