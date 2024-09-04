@@ -16,25 +16,25 @@ $objUser = new modelUser();
 $objBarang = new modelBarang();
 $objTransaksi = new modelTransaksi();
 
-//create data transaksi-1
-$barang1 = $objBarang->getBarangById(1);
-$jumlah1 = 2;
-$barang2 = $objBarang->getBarangById(2);
-$jumlah2 = 3;
-
-//add barang dan jumlah jadi satu variable
-$barangsA[]=$barang1;
-$barangsA[]=$barang2;
-$barangsB[]=$barang1;
-
-$jumlahsA[]=2;
-$jumlahsA[]=6;
-
-$jumlahsB[]=2;
-
-
-$objTransaksi->addTransaksi($barangsA,$jumlahsA,$objUser->getUserById(1),$objUser->getUserById(2));
-$objTransaksi->addTransaksi($barangsB,$jumlahsB,$objUser->getUserById(1),$objUser->getUserById(2));
+////create data transaksi-1
+//$barang1 = $objBarang->getBarangById(1);
+//$jumlah1 = 2;
+//$barang2 = $objBarang->getBarangById(2);
+//$jumlah2 = 3;
+//
+////add barang dan jumlah jadi satu variable
+//$barangsA[]=$barang1;
+//$barangsA[]=$barang2;
+//$barangsB[]=$barang1;
+//
+//$jumlahsA[]=2;
+//$jumlahsA[]=6;
+//
+//$jumlahsB[]=2;
+//
+//
+//$objTransaksi->addTransaksi($barangsA,$jumlahsA,$objUser->getUserById(1),$objUser->getUserById(2));
+//$objTransaksi->addTransaksi($barangsB,$jumlahsB,$objUser->getUserById(1),$objUser->getUserById(2));
 
 //testing get Transaksi
 $transaksis = $objTransaksi->getAllTransaksi();

@@ -6,11 +6,13 @@ session_start();
 require_once 'Controllers/controllerRole.php';
 require_once 'Controllers/controllerUser.php';
 require_once 'Models/modelBarang.php';
+require_once 'Controllers/controllerTransaksi.php';
 
 //objects
 $objectRole = new controllerRole();
 $objectUser = new controllerUser();
 $objBarang = new modelBarang();
+$objTransaksi = new controllerTransaksi();
 
 session_destroy();
 
@@ -21,6 +23,13 @@ if (isset($_GET['modul'])){
 }
 
 switch ($modul){
+    case 'transaksi':
+        $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;
+        switch ($fitur){
+            default:
+                $objTransaksi->listTransaksi();
+        }
+        break;
     case 'dashboard':
 //        $objBarang->addBarang("kompor",22000);
 //        print_r($objBarang->getAllBarangs());
