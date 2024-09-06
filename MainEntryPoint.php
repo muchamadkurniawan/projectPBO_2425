@@ -26,6 +26,18 @@ switch ($modul){
     case 'transaksi':
         $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;
         switch ($fitur){
+            case 'add':
+                if ($_SERVER['REQUEST_METHOD']=='POST'){
+//                    $name = $_POST['name'];
+//                    $username = $_POST['username'];
+//                    $passowrd = $_POST['password'];
+//                    $role_Status = $_POST['role_status'];
+//                    $objectUser->addUser($role_Status,$username,$passowrd,$name);
+                } else {
+//                    $listRoleName = $objectRole->getListRoleName();
+                    include 'Views/transaksi_input.php';
+                }
+                break;
             default:
                 $objTransaksi->listTransaksi();
         }
