@@ -52,6 +52,7 @@ class modelRole
                 return true;
             }
         }
+        return false;
     }
 
     public function deleteRole($role_id){

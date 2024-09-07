@@ -43,7 +43,7 @@
                     <!-- Role Status -->
                     <div class="mb-4">
                         <label for="role_status" class="block text-gray-700 text-sm font-bold mb-2">Role Name</label>
-                        <select id="role_status" name="role_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        <select id="role_status" name="role_status" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                             <option value="">Pilih Status</option>
                             <?php foreach ($listRoleName as $rolename){ ?>
                             <option value=<?php echo htmlspecialchars($rolename)?>>

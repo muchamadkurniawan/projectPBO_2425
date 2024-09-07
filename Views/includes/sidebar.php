@@ -32,8 +32,17 @@
 <!--                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Delete</li>-->
 <!--            </ul>-->
         </li>
-        <li>
-            <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Menu Transaksi</div>
+        <li class="group">
+            <div class="px-4 py-2 hover:bg-gray-700 cursor-pointer group-hover:bg-gray-700">Menu Transaksi</div>
+            <ul class="ml-4 space-y-1 hidden group-hover:block">
+                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">
+                    <a href="MainEntryPoint.php?modul=transaksi&fitur=add">Insert Transaksi</a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">
+                    <a href="MainEntryPoint.php?modul=transaksi">List Transaksi</a>
+                </li>
+
+            </ul>
         </li>
     </ul>
 </div>

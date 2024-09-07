@@ -5,10 +5,16 @@ session_start();
 // dependency
 require_once 'Controllers/controllerRole.php';
 require_once 'Controllers/controllerUser.php';
+require_once 'Models/modelBarang.php';
+require_once 'Controllers/controllerTransaksi.php';
 
 //objects
 $objectRole = new controllerRole();
 $objectUser = new controllerUser();
+$objBarang = new modelBarang();
+$objTransaksi = new controllerTransaksi();
+
+session_destroy();
 
 if (isset($_GET['modul'])){
     $modul = $_GET['modul'];
@@ -17,7 +23,34 @@ if (isset($_GET['modul'])){
 }
 
 switch ($modul){
+    case 'transaksi':
+        $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;
+        switch ($fitur){
+            case 'add':
+                if ($_SERVER['REQUEST_METHOD']=='POST'){
+//                    $name = $_POST['name'];
+//                    $username = $_POST['username'];
+//                    $passowrd = $_POST['password'];
+//                    $role_Status = $_POST['role_status'];
+//                    $objectUser->addUser($role_Status,$username,$passowrd,$name);
+                } else {
+//                    $listRoleName = $objectRole->getListRoleName();
+                    include 'Views/transaksi_input.php';
+                }
+                break;
+            default:
+                $objTransaksi->listTransaksi();
+        }
+        break;
     case 'dashboard':
+//        $objBarang->addBarang("kompor",22000);
+//        print_r($objBarang->getAllBarangs());
+//        foreach ($objBarang->getAllBarangs() as $barang) {
+//            echo $barang->nameBarang . "<br>";
+//            echo htmlspecialchars($barang->idBarang) . "<br>";
+//            echo $barang->hargaBarang . "<br>";
+//            echo "------------------" . "<br>";
+//        }
         include 'Views/kosong.php';
         break;
     case 'user':
@@ -27,15 +60,13 @@ switch ($modul){
                 if ($_SERVER['REQUEST_METHOD']=='POST'){
                     $name = $_POST['name'];
                     $username = $_POST['username'];
-                    $password = $_POST['password'];
-                    $rolename = $_POST['role_name'];
-                    $obj_role = $objectRole->getRoleByName($rolename);
-                    $objectUser->addUser($obj_role,$username,$password,$name);
+                    $passowrd = $_POST['password'];
+                    $role_Status = $_POST['role_status'];
+                    $objectUser->addUser($role_Status,$username,$passowrd,$name);
                 } else {
                     $listRoleName = $objectRole->getListRoleName();
                     include 'Views/user_input.php';
                 }
-
                 break;
             default:
                 $objectUser->listUser();
