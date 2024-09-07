@@ -12,7 +12,7 @@ class controllerUser{
     }
     public function addUser($role, $username, $password, $name){
         $this->userModel->addUser($role, $username, $password, $name);
-        header('location:');
+        header('location:MainEntryPoint.php?modul=user');
     }
 }
 ?>

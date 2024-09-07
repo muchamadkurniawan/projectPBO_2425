@@ -24,13 +24,18 @@ switch ($modul){
         $fitur = isset($_GET['fitur']) ? $_GET['fitur'] : null;
         switch ($fitur){
             case 'add':
-//                if ($_SERVER['REQUEST_METHOD']=='POST'){
-//
-//                } else {
-//
-//                }
-                $listRoleName = $objectRole->getListRoleName();
-                include 'Views/user_input.php';
+                if ($_SERVER['REQUEST_METHOD']=='POST'){
+                    $name = $_POST['name'];
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                    $rolename = $_POST['role_name'];
+                    $obj_role = $objectRole->getRoleByName($rolename);
+                    $objectUser->addUser($obj_role,$username,$password,$name);
+                } else {
+                    $listRoleName = $objectRole->getListRoleName();
+                    include 'Views/user_input.php';
+                }
+
                 break;
             default:
                 $objectUser->listUser();

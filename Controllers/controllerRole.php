@@ -51,6 +51,10 @@ class controllerRole
         }
         return $listRoleName;
     }
+
+    public function getRoleByName($name){
+        return $this->roleModel->getRoleByName($name);
+    }
 }
 
 ?>

@@ -30,13 +30,13 @@
 
                     <!-- Username -->
                     <div class="mb-4">
-                        <label for="role_description" class="block text-gray-700 text-sm font-bold mb-2">username:</label>
+                        <label for="username" class="block text-gray-700 text-sm font-bold mb-2">username:</label>
                         <input type="text" id="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="username user" required>
                     </div>
 
                     <!-- password -->
                     <div class="mb-4">
-                        <label for="role_description" class="block text-gray-700 text-sm font-bold mb-2">password:</label>
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">password:</label>
                         <input type="text" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="password user" required>
                     </div>
 
