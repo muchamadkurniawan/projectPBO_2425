@@ -28,13 +28,24 @@ switch ($modul){
         switch ($fitur){
             case 'add':
                 if ($_SERVER['REQUEST_METHOD']=='POST'){
-//                    $name = $_POST['name'];
-//                    $username = $_POST['username'];
-//                    $passowrd = $_POST['password'];
-//                    $role_Status = $_POST['role_status'];
-//                    $objectUser->addUser($role_Status,$username,$passowrd,$name);
+                    print_r($_POST);
+                    echo "<br>";
+                    // Asumsikan $_POST['barang'] dan $_POST['jumlah'] adalah array
+                    $barang = $_POST['barang'];
+                    $jumlah = $_POST['jumlah'];
+
+                    foreach ($barang as $key => $bar) {
+                        // $key adalah indeks, $bar adalah nilai dari $_POST['barang'][$key]
+                        // $_POST['jumlah'][$key] adalah nilai dari array jumlah yang sesuai dengan barang
+                        echo "Barang: " . $bar . ", Jumlah: " . $jumlah[$key] . "<br>";
+                    }
                 } else {
 //                    $listRoleName = $objectRole->getListRoleName();
+                    $barangs = $objBarang->getAllBarangs();
+                    $customers = $objectUser->getUsers();
+//                    foreach ($customers as $customer){
+//                        echo $customer->name."<br>";
+//                    }
                     include 'Views/transaksi_input.php';
                 }
                 break;

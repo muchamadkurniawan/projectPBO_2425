@@ -18,5 +18,9 @@ class controllerUser{
         $this->userModel->addUser($role, $username, $password, $name);
         header('location: MainEntryPoint.php?modul=user');
     }
+
+    public function getUsers(){
+        return $this->userModel->getAllUsers();
+    }
 }
 ?>
