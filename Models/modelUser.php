@@ -30,7 +30,7 @@ class modelUser{
         return $this->users;
     }
 
-    public function initiliazeDefaultUser(){
+    private function initiliazeDefaultUser(){
         $roles = new modelRole();
         $role3 = $roles->getRoleById(3);
         $role1 = $roles->getRoleById(1);

@@ -1,6 +1,7 @@
 <?php
 //create object modelRole
-include 'Controllers/controllerRole.php';
+//include 'Controllers/controllerRole.php';
+session_start();
 
 //object role dari controllerRole
 $roleObject = new controllerRole();
@@ -11,24 +12,10 @@ if (isset($_GET['action'])){
 } else {
     $action = 'list';
 }
-$id = isset($_GET['id']) ? $_GET['id'] : null;
+//$id = isset($_GET['id']) ? $_GET['id'] : null;
 switch ($action){
-    case 'add':
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $role_name = $_POST['role_name'];
-            $role_description = $_POST['role_description'];
-            $role_status = $_POST['role_status'];
-            if ($role_status == 1){
-                $role_status = 1;
-            } else {
-                $role_status = 0;
-            }
-            $roleObject->addRole($role_name,$role_description,$role_status);
-        } else {
-            include 'Views/role_input.php';
-        }
-        break;
-    case 'list':
+    default:
         $roleObject->listRoles();
-        break;
+//        include 'Views/role_list.php';
 }
+?>

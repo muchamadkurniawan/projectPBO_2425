@@ -14,7 +14,7 @@ $objectUser = new controllerUser();
 $objBarang = new modelBarang();
 $objTransaksi = new controllerTransaksi();
 
-session_destroy();
+//session_destroy();
 
 if (isset($_GET['modul'])){
     $modul = $_GET['modul'];
