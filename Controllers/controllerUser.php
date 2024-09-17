@@ -22,5 +22,13 @@ class controllerUser{
     public function getUsers(){
         return $this->userModel->getAllUsers();
     }
+
+    public function getUserById($id){
+        return $this->userModel->getUserById($id);
+    }
+
+    public function getUserByName($name){
+        return $this->userModel->getUserByName($name);
+    }
 }
 ?>

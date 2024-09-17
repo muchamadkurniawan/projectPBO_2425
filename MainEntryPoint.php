@@ -29,16 +29,22 @@ switch ($modul){
             case 'add':
                 if ($_SERVER['REQUEST_METHOD']=='POST'){
                     print_r($_POST);
+                    $customer_name = $_POST['customer'];
+                    $Customer = $objectUser->getUserByName($customer_name);
+                    $Kasir = $objectUser->getUserById(1);
+                    echo $Customer->name."<br>";
+                    echo $Kasir->name."<br>";
                     echo "<br>";
                     // Asumsikan $_POST['barang'] dan $_POST['jumlah'] adalah array
                     $barang = $_POST['barang'];
                     $jumlah = $_POST['jumlah'];
 
+                    $obj_barangs = [];
                     foreach ($barang as $key => $bar) {
-                        // $key adalah indeks, $bar adalah nilai dari $_POST['barang'][$key]
-                        // $_POST['jumlah'][$key] adalah nilai dari array jumlah yang sesuai dengan barang
-                        echo "Barang: " . $bar . ", Jumlah: " . $jumlah[$key] . "<br>";
+//                        echo "Barang: " . $bar . ", Jumlah: " . $jumlah[$key] . "<br>";
+                        $obj_barangs[] = $objBarang->getBarangById($bar);
                     }
+                    $objTransaksi->addTransaksi($obj_barangs,$jumlah,$Customer,$Kasir);
                 } else {
 //                    $listRoleName = $objectRole->getListRoleName();
                     $barangs = $objBarang->getAllBarangs();

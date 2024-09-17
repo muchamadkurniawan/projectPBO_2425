@@ -72,6 +72,15 @@ class modelUser{
         }
         return null;
     }
+
+    public function getUserByName($name){
+        foreach ($this->users as $user){
+            if ($user->name == $name){
+                return $user;
+            }
+        }
+        return null;
+    }
 }
 
 ?>
